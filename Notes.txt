@@ -1,0 +1,152 @@
+Mastadon - Twitter alternative
+
+testdouble will send a duck
+
+Discord might we worth checking out to help with know good patterns and techniques
+
+Wifi Premium
+F@ll2022!
+
+testing-library.com
+
+Contract
+Input:
+  props, user interactions
+Output
+  rendered UI, calls to external functions
+
+
+render(<Hello />)
+expect(screen.getByText("Hello, World!)).toBeVisible();
+// does use regex matching
+
+
+*** Make sure your test fails ***
+
+getByLabelText looks at the label text on an Input
+
+
+Confirming the presence
+  toBeVisible()
+  toBeInTheDocument()
+
+Confirming Absense
+  not.toBeInTheDocument()
+
+These would be great for testing/simulating error message handling
+
+One assertion per test might be best approach when testing rendered compoentns
+
+One behavior per test
+
+ReRender is possible
+
+********************************************************************
+How do you encourage good use of standard contracts in a team?
+********************************************************************
+
+it.todo()
+
+
+const user = userEvent.setup();
+
+user.type()
+user.click()
+user.clear()
+user.selectOptions()
+
+UserEvent 14 Recommended!!!!!
+
+const mockOnClick = jest.fn().mockName('onClick')
+render(<Component onClick={mockOnClick} />)
+expect(mockOnClick).toHaveBeenCalled()
+
+
+*** Jest Module Mock for Services ***
+
+React Queries???
+NextJS?
+
+import api from './api'
+
+jest.mock('../api')
+// replaces all the exports with functions
+
+api.get.mockResolvedValue({
+  data: [
+    { name: 'widget1'},
+    { name: 'widget2'}
+  ]
+})
+
+expect(await screen.findByText('Widget')).toBeVisible();
+// this will pass since it would be after the previous line returns
+expect(screen.getByText('Widget')).toBeVisible();
+
+// test that the api has been called
+expect(api.get).toHaveBeenCalledWith('/widgets')
+
+is this still happening whenever I am this is
+
+
+***************************************
+Cypress
+***************************************
+
+gets kinda like jquery selectors
+also chaining can be done
+
+
+When mocking a service it would be good on posts to also test that
+mock sends a correct post body
+
+it would be important to know how we would integrate cy testing into CI/CD stuff
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
